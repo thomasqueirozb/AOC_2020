@@ -1,7 +1,9 @@
 pub mod aoc_error;
 pub mod days;
 
-use crate::days::{day01::day01, day02::day02, day03::day03, day04::day04, day05::day05};
+use crate::days::{
+    day01::day01, day02::day02, day03::day03, day04::day04, day05::day05, day06::day06,
+};
 use aoc_error::AOCError;
 
 use clap::{App, Arg};
@@ -121,6 +123,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         3 => day03(ifp),
         4 => day04(ifp),
         5 => day05(ifp),
+        6 => day06(ifp),
         _ => todo!("Day {} not implemented", day),
     }?;
 
