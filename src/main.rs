@@ -1,5 +1,6 @@
 pub mod aoc_error;
 pub mod day01;
+pub mod day02;
 
 use aoc_error::AOCError;
 use clap::{App, Arg};
@@ -114,6 +115,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     match day {
         1 => day01::day01(ifp),
+        2 => day02::day02(ifp),
         _ => todo!("Day {} not implemented", day),
     }?;
 
