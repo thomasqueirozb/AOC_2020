@@ -31,7 +31,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 .help(
                     "Path to folder containing inputs with names dayXX.txt\n\
                 The default path is the folder inputs/ and if this folder is \n\
-                not found in the current directoy it will be searched for in \n\
+                not found in the current directory it will be searched for in \n\
                 the directory above.",
                 )
                 .next_line_help(true)
@@ -59,7 +59,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                         Ok(ifp)
                     } else {
                         Err(AOCError::new(
-                            "Could not find inputs/ in this direcotry or the directory above",
+                            "Could not find folder inputs/ in this directory or the directory above",
                         ))
                     }
                 }
