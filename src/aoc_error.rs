@@ -7,10 +7,25 @@ pub struct AOCError {
 }
 
 impl AOCError {
-    pub fn new<S: Into<String>>(msg: S) -> AOCError {
+    pub fn new<S>(msg: S) -> Self
+    where
+        S: Into<String>,
+    {
         AOCError {
             details: msg.into(),
         }
+    }
+}
+
+impl From<&str> for AOCError {
+    fn from(msg: &str) -> Self {
+        Self::new(msg)
+    }
+}
+
+impl From<&String> for AOCError {
+    fn from(msg: &String) -> Self {
+        Self::new(msg)
     }
 }
 

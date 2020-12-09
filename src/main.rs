@@ -1,9 +1,11 @@
 pub mod aoc_error;
 pub mod days;
-use crate::days::{day01::day01, day02::day02};
 
+use crate::days::{day01::day01, day02::day02, day03::day03};
 use aoc_error::AOCError;
+
 use clap::{App, Arg};
+
 use std::error::Error;
 use std::fs;
 use std::path::Path;
@@ -116,6 +118,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     match day {
         1 => day01(ifp),
         2 => day02(ifp),
+        3 => day03(ifp),
         _ => todo!("Day {} not implemented", day),
     }?;
 
