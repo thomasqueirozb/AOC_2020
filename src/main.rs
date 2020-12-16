@@ -3,7 +3,7 @@ pub mod days;
 
 use crate::days::{
     day01::day01, day02::day02, day03::day03, day04::day04, day05::day05, day06::day06,
-    day07::day07, day08::day08,
+    day07::day07, day08::day08, day09::day09,
 };
 use aoc_error::AOCError;
 
@@ -127,6 +127,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         6 => day06(ifp),
         7 => day07(ifp),
         8 => day08(ifp),
+        9 => day09(ifp),
         _ => unimplemented!("Day {} not implemented", day),
     }?;
 
