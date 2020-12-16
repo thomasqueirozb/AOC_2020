@@ -126,7 +126,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         5 => day05(ifp),
         6 => day06(ifp),
         7 => day07(ifp),
-        _ => todo!("Day {} not implemented", day),
+        _ => unimplemented!("Day {} not implemented", day),
     }?;
 
     Ok(())
